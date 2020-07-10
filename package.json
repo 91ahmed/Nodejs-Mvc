@@ -1,0 +1,16 @@
+{
+  "name": "node-app",
+  "version": "1.0.0",
+  "description": "node js framework",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js --watch"
+  },
+  "author": "ahmed hassan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mysql": "^2.18.1"
+  }
+}

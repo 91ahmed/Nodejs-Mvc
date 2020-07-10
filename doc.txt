@@ -1,0 +1,18 @@
+
+=================
+DELETE FROM TABLE
+=================
+var id = 1;
+var users = new Model('users')
+			.delete('WHERE id = '+id)
+			.save();
+
+var users = new Model('users')
+			.delete()
+			.whereIn('id', [1,2])
+			.save();
+
+var users = new Model('users')
+			.delete()
+			.where('id', '=', 3)
+			.save();
