@@ -1,18 +1,25 @@
+=================
+UPDATE DATA
+=================
+var user = new Mysql('users').update({
+	'id': '2',
+	'name': 'osama'
+}, {'id': '1'});
+
+=================
+INSERT DATA
+=================
+var user = new Mysql('users').insert({
+	'id': '1',
+	'username': 'ahmed'
+});
 
 =================
 DELETE FROM TABLE
 =================
-var id = 1;
-var users = new Model('users')
-			.delete('WHERE id = '+id)
-			.save();
+var user = new Mysql('users').delete({'id':'2'});
 
-var users = new Model('users')
-			.delete()
-			.whereIn('id', [1,2])
-			.save();
-
-var users = new Model('users')
-			.delete()
-			.where('id', '=', 3)
-			.save();
+=================
+CUSTOM QUERY
+=================
+var user = new Mysql().query('DELETE FROM users WHERE id = 3');
