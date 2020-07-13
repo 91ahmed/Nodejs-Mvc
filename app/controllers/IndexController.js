@@ -1,9 +1,9 @@
 const Mysql = require('../../lib/database/mysql')
+const PostgreSql = require('../../lib/database/postgresql')
 
 exports.index = (req, res) =>
 {
-	//res.render('index', {title: 'Home'})
-	new Mysql('users').select('name, id').paginate(req, 3);
+	res.render('index', {title: 'Home'})
 }
 
 exports.send = (req, res) => 

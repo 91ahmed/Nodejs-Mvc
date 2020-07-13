@@ -1,7 +1,7 @@
 =================
 UPDATE DATA
 =================
-var user = new Mysql('users').update({
+new Mysql('users').update({
 	'id': '2',
 	'name': 'osama'
 }, {'id': '1'});
@@ -9,22 +9,43 @@ var user = new Mysql('users').update({
 =================
 INSERT DATA
 =================
-var user = new Mysql('users').insert({
+[MySQL]
+new Mysql('users').insert({
 	'id': '1',
 	'username': 'ahmed'
+});
+
+[PostgreSQL]
+new PostgreSql('users').insert({
+	'id': '5',
+	'name': 'tamer'
 });
 
 =================
 DELETE FROM TABLE
 =================
-var user = new Mysql('users').delete({'id':'2'});
+[MySQL]
+new Mysql('users').delete({'id':'2'})
+new Mysql().query('DELETE FROM users WHERE id IN(8,10)')
+
+[PostgreSQL]
+new PostgreSql('users').delete({'id':'2'})
+new PostgreSql().query('DELETE FROM users WHERE id IN(8,10)')
 
 =================
 CUSTOM QUERY
 =================
-var user = new Mysql().query('DELETE FROM users WHERE id = 3');
+[MySQL]
+var users = new Mysql().query('SELECT * FROM users')
+
+[PostgreSQL]
+var users = new PostgreSql().query('SELECT * FROM users')
 
 =============
 PAGINATION
 =============
-var users = new Mysql('users').select('name, id').paginate(req, 5);
+[MySQL]
+var users = new Mysql('users').select('name, id').paginate(req, 5)
+
+[PostgreSQL]
+var users = new PostgreSql('users').select('name, id').paginate(req, 5)
