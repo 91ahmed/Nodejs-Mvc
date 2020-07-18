@@ -12,7 +12,7 @@ app.use(express.static('public'))
 // Set views path
 app.set('views', path.join(__dirname, 'app/views'));
 // Set Template engine
-app.set('view engine', 'hbs');
+app.set('view engine', 'pug');
 
 routes(app)
 

@@ -1,0 +1,37 @@
+doctype html
+html
+    head
+        title= title
+    body
+        // Start New Section
+        table(border="1")
+            thead
+                tr
+                    th ID
+                    th Name
+            tbody
+                each val in data2
+                    tr
+                        td= val.id
+                        td= val.name
+
+        br
+        br
+        
+        // Start New Section
+        table(border="1")
+            thead
+                tr
+                    th ID
+                    th Name
+            tbody
+                each val in data3
+                    tr
+                        td= val.id
+                        td= val.name
+
+        // Start Send Form
+        form(action="send" method="POST")
+            input(name="username" placeholder="username")
+            input(name="email" type="email" placeholder="email address")
+            button(type="submit") Send

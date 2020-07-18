@@ -10,9 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "express-validator": "^6.6.0",
     "hbs": "^4.1.1",
     "mongodb": "^3.5.9",
     "mysql": "^2.18.1",
-    "pg": "^8.3.0"
+    "pg": "^8.3.0",
+    "pug": "^3.0.0"
   }
 }

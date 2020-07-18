@@ -27,19 +27,19 @@ DELETE FROM TABLE
 =================
 [MySQL]
 new Mysql('users').delete({'id':'2'})
-new Mysql().query('DELETE FROM users WHERE id IN(8,10)')
+new Mysql().customQuery('DELETE FROM users WHERE id IN(8,10)')
 
 [PostgreSQL]
 new PostgreSql('users').delete({'id':'2'})
-new PostgreSql().query('DELETE FROM users WHERE id IN(8,10)')
+new PostgreSql().customQuery('DELETE FROM users WHERE id IN(8,10)')
 
 CUSTOM QUERY
 =================
 [MySQL]
-var users = new Mysql().query('SELECT * FROM users')
+var users = new Mysql().customQuery('SELECT * FROM users').get()
 
 [PostgreSQL]
-var users = new PostgreSql().query('SELECT * FROM users')
+var users = new PostgreSql().customQuery('SELECT * FROM users').get()
 
 PAGINATION
 =============
